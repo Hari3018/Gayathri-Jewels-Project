@@ -1,103 +1,82 @@
-/* src/components/Navbar.css */
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Navbar styling */
-  .navbar {
+/* General Navbar Styling */
+.navbar {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    background-color: #f9e7e1;
-    padding: 10px 20px;
-    border-bottom: 1px solid #ddd;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
-  .navbar .logo {
+  /* Logo Section */
+  .logo {
     display: flex;
     align-items: center;
   }
   
-  .navbar .logo img {
-    height: 40px;
+  .logo-img {
+    max-height: 50px;
+  }
+  
+  /* Search Bar Section */
+  .search-bar {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    margin: 0 15px;
+    position: relative;
+  }
+  
+  .search-bar input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
     margin-right: 10px;
   }
   
-  .navbar .search-bar {
-    flex: 1;
-    margin: 0 20px;
-    position: relative;
-  }
-  
-  .navbar .search-bar input {
-    width: 100%;
-    padding: 10px 15px;
-    border-radius: 20px;
-    border: 1px solid #ccc;
-    outline: none;
-    font-size: 14px;
-  }
-  
-  .navbar .search-bar .icons {
+  .search-bar .search-icon {
     position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    gap: 10px;
-  }
-  
-  .navbar .icons img {
-    height: 20px;
+    right: 35px;
+    color: #888;
     cursor: pointer;
   }
   
-  .navbar .menu {
+  .search-bar .camera-icon {
+    position: absolute;
+    right: 10px;
+    color: #888;
+    cursor: pointer;
+  }
+  
+  /* Top Icons Section */
+  .top-icons {
     display: flex;
-    align-items: center;
     gap: 15px;
   }
   
-  .navbar .menu div {
+  .top-icons a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
     display: flex;
     align-items: center;
     gap: 5px;
-    cursor: pointer;
   }
   
-  .navbar .menu div img {
-    height: 20px;
+  .top-icons .festive-icon,
+  .top-icons .account-icon,
+  .top-icons .wishlist-icon,
+  .top-icons .cart-icon {
+    color: #888;
   }
   
-  .navbar .cart {
-    position: relative;
-  }
-  
-  .navbar .cart span {
-    position: absolute;
-    top: -5px;
-    right: -10px;
-    background-color: black;
+  .cart-count {
+    background-color: red;
     color: white;
-    border-radius: 50%;
     font-size: 12px;
-    padding: 2px 6px;
-  }
-  
-  /* Bottom menu */
-  .bottom-menu {
-    display: flex;
-    justify-content: space-around;
-    padding: 10px 20px;
-    background-color: white;
-    border-top: 1px solid #ddd;
-  }
-  
-  .bottom-menu div {
-    font-weight: bold;
-    cursor: pointer;
+    border-radius: 50%;
+    padding: 2px 5px;
+    margin-left: 5px;
   }
   
