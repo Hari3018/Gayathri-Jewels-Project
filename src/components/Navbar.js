@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';  // Import Link from React Router
 import './Navbar.css'; // Ensure styles are defined in this file
 
 const Navbar = () => {
@@ -8,7 +9,7 @@ const Navbar = () => {
         {/* Logo Section */}
         <div className="logo">
           <img 
-            src="/images/logo.png" 
+            src="/components/logo.jpg" 
             alt="Gayathri Jewels" 
             className="logo-img" 
           />
@@ -21,27 +22,42 @@ const Navbar = () => {
             placeholder="Search for Gold Jewellery, Diamond Jewellery and more..." 
             aria-label="Search" 
           />
-          <i className="fa-solid fa-magnifying-glass search-icon"></i>
           <i className="fa-solid fa-camera camera-icon"></i>
+          <i className="fa-solid fa-magnifying-glass search-icon"></i>
         </div>
 
         {/* Top Icons Section */}
         <div className="top-icons">
-          <a href="#">
+          <Link to="#"> {/* Changed to Link from anchor tag */}
             <i className="fa-solid fa-sun festive-icon"></i> FESTIVE
-          </a>
-          <a href="#">
+          </Link>
+          <Link to="#"> {/* Changed to Link from anchor tag */}
+            <i className="fa-solid fa-store store-icon"></i> STORES
+          </Link>
+          <Link to="#"> {/* Changed to Link from anchor tag */}
             <i className="fa-solid fa-user account-icon"></i> ACCOUNT
-          </a>
-          <a href="#">
+          </Link>
+          <Link to="#"> {/* Changed to Link from anchor tag */}
             <i className="fa-solid fa-heart wishlist-icon"></i> WISHLIST
-          </a>
-          <a href="#">
+          </Link>
+          <Link to="/cart"> {/* Changed to Link from anchor tag */}
             <i className="fa-solid fa-cart-shopping cart-icon"></i> CART
             <span className="cart-count">0</span>
-          </a>
+          </Link>
         </div>
       </div>
+
+      {/* Navigation Bar */}
+      <nav className="navigation-bar">
+        <Link to="#">ALL JEWELLERY</Link> {/* Changed to Link */}
+        <Link to="#">SILVER</Link> {/* Changed to Link */}
+        <Link to="#">GOLD</Link> {/* Changed to Link */}
+        <Link to="#">DIAMOND</Link> {/* Changed to Link */}
+        <Link to="#">COLLECTIONS</Link> {/* Changed to Link */}
+        <Link to="#">WEDDING</Link> {/* Changed to Link */}
+        <Link to="#">GIFTING</Link> {/* Changed to Link */}
+        <Link to="#">MORE</Link> {/* Changed to Link */}
+      </nav>
     </header>
   );
 };
