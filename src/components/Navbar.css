@@ -5,6 +5,10 @@
   background-color: #faede5; /* Matches the soft peach color */
   font-family: 'Arial', sans-serif;
   border-bottom: 1px solid #ccc;
+<<<<<<< HEAD
+=======
+  width: 100%; /* Ensures full-width navbar */
+>>>>>>> bd3e92a (new)
 }
 
 /* Logo and Icons Section */
@@ -14,10 +18,18 @@
   justify-content: space-between;
   padding: 10px 20px;
   flex-wrap: wrap; /* Ensure this section is flexible on smaller screens */
+<<<<<<< HEAD
+=======
+  width: 100%;
+>>>>>>> bd3e92a (new)
 }
 
 .logo-img {
   height: 40px;
+<<<<<<< HEAD
+=======
+  max-width: 100%; /* Ensures logo doesn't overflow */
+>>>>>>> bd3e92a (new)
 }
 
 /* Search Bar */
@@ -30,7 +42,13 @@
   flex: 1;
   max-width: 600px;
   padding: 5px 10px;
+<<<<<<< HEAD
   margin: 10px 0;
+=======
+  margin: 20px 0;
+  width: 100%; /* Ensures full-width on smaller screens */
+  position: relative; /* To position icons inside */
+>>>>>>> bd3e92a (new)
 }
 
 .search-bar input {
@@ -46,12 +64,26 @@
   color: #aaa;
 }
 
+<<<<<<< HEAD
+=======
+/* Positioning of the icons inside the search bar */
+>>>>>>> bd3e92a (new)
 .camera-icon,
 .search-icon {
   color: #000;
   font-size: 18px;
+<<<<<<< HEAD
   margin-left: 8px;
   cursor: pointer;
+=======
+  cursor: pointer;
+  position: absolute;
+  right: 10px; /* Positioned to the right side */
+}
+
+.camera-icon {
+  right: 40px; /* Adjust camera icon position if needed */
+>>>>>>> bd3e92a (new)
 }
 
 /* Top Icons Section */
@@ -59,6 +91,10 @@
   display: flex;
   gap: 15px;
   align-items: center;
+<<<<<<< HEAD
+=======
+  width: 100%;
+>>>>>>> bd3e92a (new)
 }
 
 .top-icons a {
@@ -80,6 +116,12 @@
   padding: 2px 6px;
   border-radius: 50%;
   margin-left: 5px;
+<<<<<<< HEAD
+=======
+  position: relative;
+  top: -5px;
+  right: -5px;
+>>>>>>> bd3e92a (new)
 }
 
 /* Navigation Bar */
@@ -90,6 +132,10 @@
   padding: 10px 0;
   font-weight: bold;
   flex-wrap: wrap; /* Ensure this section is flexible on smaller screens */
+<<<<<<< HEAD
+=======
+  width: 100%;
+>>>>>>> bd3e92a (new)
 }
 
 .navigation-bar a {
@@ -156,4 +202,31 @@
     font-size: 12px;
     padding: 5px 8px;
   }
+<<<<<<< HEAD
+=======
+
+  /* Custom styles for camera and search icons */
+  .camera-icon, .search-icon {
+    font-size: 1.125rem; /* Adjust the icon size */
+    margin-left: 0.75rem; /* Add space between the icons */
+  }
+}
+
+/* Optional: If needed, customize icon sizes further in case of larger screens */
+@media (min-width: 768px) {
+  .camera-icon, .search-icon {
+    font-size: 1.5rem;
+  }
+}
+
+/* Active Link Styling */
+.active-link {
+  color: #daa520; /* Gold color for active links */
+  font-weight: bold;
+}
+
+/* Custom styles for icons */
+.camera-icon, .search-icon {
+  font-size: 1.25rem; /* Adjust icon size */
+>>>>>>> bd3e92a (new)
 }
