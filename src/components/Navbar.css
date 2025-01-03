@@ -2,10 +2,11 @@
 .navbar {
   display: flex;
   flex-direction: column;
-  background-color: #faede5; /* Matches the soft peach color */
+  background-color: #faede5;
   font-family: 'Arial', sans-serif;
   border-bottom: 1px solid #ccc;
-  width: 100%; /* Ensures full-width navbar */
+  width: 100%;
+  padding: 0;
 }
 
 /* Logo and Icons Section */
@@ -13,70 +14,75 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
-  flex-wrap: wrap; /* Ensure this section is flexible on smaller screens */
+  padding: 20px 20px;
   width: 100%;
 }
 
+/* Logo Section */
+.logo {
+  flex: 1;
+}
+
 .logo-img {
-  height: 40px;
+  height: 60px; /* Increased logo height */
   max-width: 100%; /* Ensures logo doesn't overflow */
 }
 
+
 /* Search Bar */
 .search-bar {
+  flex: 2;
   display: flex;
   align-items: center;
   background-color: white;
   border: 1px solid #ccc;
   border-radius: 5px;
-  flex: 1;
-  max-width: 600px;
-  padding: 5px 10px;
-  margin: 20px 0;
-  width: 100%; /* Ensures full-width on smaller screens */
-  position: relative; /* To position icons inside */
+  width: 70%; /* Increase the width percentage */
+  height: 50px; /* Explicitly set search bar height */
+  margin: 0 auto; /* Center-aligns search bar */
+  transform: translateX(-150px); /* Moves the search bar 6px to the left */
 }
+
+
+
 
 .search-bar input {
   border: none;
   flex: 1;
-  padding: 8px;
+  padding: 0 8px; /* Adjusted padding for proper alignment */
   outline: none;
   font-size: 14px;
   color: #555;
+  height: 80%; /* Matches the height of the search bar container */
 }
 
 .search-bar input::placeholder {
   color: #aaa;
 }
 
-/* Positioning of the icons inside the search bar */
 .camera-icon,
 .search-icon {
   color: #000;
-  font-size: 18px;
+  font-size: 23px;
   cursor: pointer;
-  position: absolute;
-  right: 10px; /* Positioned to the right side */
-}
-
-.camera-icon {
-  right: 40px; /* Adjust camera icon position if needed */
-}
-
-/* Top Icons Section */
-.top-icons {
-  display: flex;
-  gap: 15px;
+  margin-left: 20px;
   align-items: center;
-  width: 100%;
+  transform: translateY(-9px); 
+}
+
+/* Icons Section (Festive, Stores, etc.) */
+.top-icons {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 50px;
 }
 
 .top-icons a {
   text-decoration: none;
   color: #000;
-  font-size: 14px;
+  font-size: 16px; /* Increased font size */
   display: flex;
   align-items: center;
 }
@@ -91,7 +97,6 @@
   font-size: 12px;
   padding: 2px 6px;
   border-radius: 50%;
-  margin-left: 5px;
   position: relative;
   top: -5px;
   right: -5px;
@@ -100,36 +105,34 @@
 /* Navigation Bar */
 .navigation-bar {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between; /* Ensures equal spacing */
   background-color: white;
-  padding: 10px 0;
+  padding: 20px 0;
   font-weight: bold;
-  flex-wrap: wrap; /* Ensure this section is flexible on smaller screens */
-  width: 100%;
+  flex-wrap: wrap;
+  width: 102%;
 }
 
 .navigation-bar a {
+  flex: 1; /* Equal spacing for each link */
+  text-align: center; /* Centers the text within each link */
   text-decoration: none;
   color: #000;
-  font-size: 14px;
+  font-size: 16px; /* Slightly larger font size for better readability */
   text-transform: uppercase;
-  padding: 5px 10px;
+  padding: 10px 20px;
+  margin-right: 60px;
 }
 
 .navigation-bar a:hover {
-  color: #c49b63; /* Gold accent color */
+  color: #c49b63;
 }
 
 /* Mobile Adjustments */
 @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-  }
-
   .logo-and-icons {
-    justify-content: center;
     flex-direction: column;
-    text-align: center;
+    align-items: center;
   }
 
   .search-bar {
@@ -138,61 +141,13 @@
   }
 
   .top-icons {
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 10px;
-  }
-
-  .navigation-bar {
-    justify-content: space-evenly;
-    width: 100%;
-    font-size: 12px;
-  }
-
-  .navigation-bar a {
-    padding: 5px 8px;
-  }
-}
-
-/* Extra small screen adjustments (phone in portrait mode) */
-@media (max-width: 480px) {
-  .logo-img {
-    height: 30px; /* Smaller logo */
-  }
-
-  .search-bar {
-    font-size: 12px;
-  }
-
-  .top-icons {
+    justify-content: center;
     gap: 10px;
   }
 
   .navigation-bar a {
-    font-size: 12px;
-    padding: 5px 8px;
+    flex: none; /* Allow wrapping for small screens */
+    width: 100%; /* Full-width links */
+    text-align: center;
   }
-  /* Custom styles for camera and search icons */
-  .camera-icon, .search-icon {
-    font-size: 1.125rem; /* Adjust the icon size */
-    margin-left: 0.75rem; /* Add space between the icons */
-  }
-}
-
-/* Optional: If needed, customize icon sizes further in case of larger screens */
-@media (min-width: 768px) {
-  .camera-icon, .search-icon {
-    font-size: 1.5rem;
-  }
-}
-
-/* Active Link Styling */
-.active-link {
-  color: #daa520; /* Gold color for active links */
-  font-weight: bold;
-}
-
-/* Custom styles for icons */
-.camera-icon, .search-icon {
-  font-size: 1.25rem; /* Adjust icon size */
 }
