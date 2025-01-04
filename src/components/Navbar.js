@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';  // Correctly import NavLink
+import { NavLink } from 'react-router-dom'; // Correctly import NavLink
 import './Navbar.css'; // Ensure styles are defined in this file
 
 const Navbar = () => {
@@ -33,7 +33,8 @@ const Navbar = () => {
           <NavLink to="#" aria-label="Store Locator" className="text-sm text-gray-700 hover:text-[#daa520] flex items-center">
             <i className="fa-solid fa-store mr-1"></i> STORES
           </NavLink>
-          <NavLink to="#" aria-label="Account" className="text-sm text-gray-700 hover:text-[#daa520] flex items-center">
+          {/* ACCOUNT NavLink */}
+          <NavLink to="/login" aria-label="Account" className="text-sm text-gray-700 hover:text-[#daa520] flex items-center">
             <i className="fa-solid fa-user mr-1"></i> ACCOUNT
           </NavLink>
           <NavLink to="/products" aria-label="Wishlist" className="text-sm text-gray-700 hover:text-[#daa520] flex items-center">
@@ -49,14 +50,54 @@ const Navbar = () => {
       {/* Navigation Bar */}
       <div className="navigation-bar bg-white py-2 shadow-sm">
         <div className="container mx-auto flex flex-wrap justify-center gap-4">
-          <NavLink to="/all-jewellery" activeClassName="active-link" className="text-sm text-gray-700 hover:text-[#daa520] px-3">ALL </NavLink>
-          <NavLink to="/silver" activeClassName="active-link" className="text-sm text-gray-700 hover:text-[#daa520] px-3">SILVER</NavLink>
-          <NavLink to="/gold" activeClassName="active-link" className="text-sm text-gray-700 hover:text-[#daa520] px-3">GOLD</NavLink>
-          <NavLink to="/diamond" activeClassName="active-link" className="text-sm text-gray-700 hover:text-[#daa520] px-3">DIAMOND</NavLink>
-          <NavLink to="/collections" activeClassName="active-link" className="text-sm text-gray-700 hover:text-[#daa520] px-3">COLLECTIONS</NavLink>
-          <NavLink to="/wedding" activeClassName="active-link" className="text-sm text-gray-700 hover:text-[#daa520] px-3">WEDDING</NavLink>
-          <NavLink to="/gifting" activeClassName="active-link" className="text-sm text-gray-700 hover:text-[#daa520] px-3">GIFTING</NavLink>
-          <NavLink to="/more" activeClassName="active-link" className="text-sm text-gray-700 hover:text-[#daa520] px-3">MORE</NavLink>
+          <NavLink 
+            to="/all-jewellery" 
+            className={({ isActive }) => (isActive ? 'active-link text-sm text-[#daa520] px-3' : 'text-sm text-gray-700 hover:text-[#daa520] px-3')}
+          >
+            ALL
+          </NavLink>
+          <NavLink 
+            to="/silver" 
+            className={({ isActive }) => (isActive ? 'active-link text-sm text-[#daa520] px-3' : 'text-sm text-gray-700 hover:text-[#daa520] px-3')}
+          >
+            SILVER
+          </NavLink>
+          <NavLink 
+            to="/gold" 
+            className={({ isActive }) => (isActive ? 'active-link text-sm text-[#daa520] px-3' : 'text-sm text-gray-700 hover:text-[#daa520] px-3')}
+          >
+            GOLD
+          </NavLink>
+          <NavLink 
+            to="/diamond" 
+            className={({ isActive }) => (isActive ? 'active-link text-sm text-[#daa520] px-3' : 'text-sm text-gray-700 hover:text-[#daa520] px-3')}
+          >
+            DIAMOND
+          </NavLink>
+          <NavLink 
+            to="/collections" 
+            className={({ isActive }) => (isActive ? 'active-link text-sm text-[#daa520] px-3' : 'text-sm text-gray-700 hover:text-[#daa520] px-3')}
+          >
+            COLLECTIONS
+          </NavLink>
+          <NavLink 
+            to="/wedding" 
+            className={({ isActive }) => (isActive ? 'active-link text-sm text-[#daa520] px-3' : 'text-sm text-gray-700 hover:text-[#daa520] px-3')}
+          >
+            WEDDING
+          </NavLink>
+          <NavLink 
+            to="/gifting" 
+            className={({ isActive }) => (isActive ? 'active-link text-sm text-[#daa520] px-3' : 'text-sm text-gray-700 hover:text-[#daa520] px-3')}
+          >
+            GIFTING
+          </NavLink>
+          <NavLink 
+            to="/more" 
+            className={({ isActive }) => (isActive ? 'active-link text-sm text-[#daa520] px-3' : 'text-sm text-gray-700 hover:text-[#daa520] px-3')}
+          >
+            MORE
+          </NavLink>
         </div>
       </div>
     </header>
