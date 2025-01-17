@@ -17,7 +17,7 @@ html, body {
 
 /* Home Container */
 .home {
-  height: calc(100vh - 80px); /* Adjust based on your navbar height */
+  height: calc(100vh - 200px); /* Adjust based on your navbar height */
   overflow-y: auto; /* Enables vertical scrolling */
   padding-top: 80px; /* Ensures it stretches to the full viewport height */
 }
