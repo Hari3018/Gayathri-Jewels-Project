@@ -1,0 +1,88 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html, body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    height: 100%;
+    background-color: #fdfdfd;
+  }
+  
+  /* Cart Page Styling */
+  .cart-page {
+    padding: 2rem;
+    min-height: 100vh; /* Ensures the page takes up full height */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Header */
+  .cart-page h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  /* Cart Items Section */
+  .cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    overflow-y: auto; /* Ensures scrolling if the list of items is long */
+  }
+  
+  .cart-item {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cart-item h3 {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .cart-item p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  .cart-item .quantity {
+    font-weight: bold;
+  }
+  
+  .cart-item .price {
+    color: #c89e17;
+    font-weight: bold;
+  }
+  
+  /* Total Price Styling */
+  .cart-page h2 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    color: #333;
+  }
+  
+  /* Empty Cart Message */
+  .cart-page p {
+    font-size: 1.25rem;
+    color: #888;
+    text-align: center;
+  }
+  
+  /* Ensure Footer and Page Spacing */
+  footer {
+    padding: 1rem;
+    text-align: center;
+    background-color: #333;
+    color: white;
+  }
+  
