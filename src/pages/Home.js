@@ -9,7 +9,7 @@ const Home = () => {
     "/IMG-20250114-WA0013.jpg",
     "/IMG-20250114-WA0014.jpg",
     "/IMG-20250114-WA0015.jpg",
-  ]; 
+  ];
 
   const sliderSettings = {
     dots: true,
@@ -65,16 +65,19 @@ const Home = () => {
           title="Gold Necklace"
           price="₹50000"
           image="/IMG-20250114-WA0015.jpg"
+          showAddToCart={true}
         />
         <ProductCard
           title="Diamond Ring"
           price="₹20000"
           image="/IMG-20250114-WA0017.jpg"
+          showAddToCart={true}
         />
         <ProductCard
           title="Silver Bracelet"
           price="₹15000"
           image="/IMG-20250114-WA0016.jpg"
+          showAddToCart={true}
         />
       </div>
 
